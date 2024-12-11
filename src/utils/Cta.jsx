@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaArrowRight } from "react-icons/fa"; // React Icons
+import { FaMapMarkerAlt, FaArrowRight, FaTimes } from "react-icons/fa"; // React Icons
+import BookingForm from "./BookingForm"; // Assuming BookingForm is the modal component
 
 const CallToAction = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <section className="relative bg-gradient-to-r from-yellow-500 to-gray-200 py-16">
       <div className="container mx-auto px-6 md:px-12">
@@ -31,16 +37,18 @@ const CallToAction = () => {
                 Ready to explore Uttar Pradesh and its wonders?
               </h2>
               <p className="text-gray-600 mb-6 text-base lg:text-lg">
-                Discover the rich culture, ancient temples, vibrant cities, and the beauty of Uttar Pradesh. Embark on an unforgettable journey through the heart of India and create lifelong memories.
+                Discover the rich culture, ancient temples, vibrant cities, and
+                the beauty of Uttar Pradesh. Embark on an unforgettable journey
+                through the heart of India and create lifelong memories.
               </p>
-              <motion.a
-                href="#"
+              <motion.button
+                onClick={openModal}
                 className="inline-block bg-black text-white py-3 px-6 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Get Quote <FaArrowRight className="inline ml-2" />
-              </motion.a>
+              </motion.button>
             </motion.div>
           </div>
         </div>
@@ -75,6 +83,21 @@ const CallToAction = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="relative bg-white rounded-lg shadow-lg max-w-lg w-full">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 bg-gray-200 rounded-full p-2 focus:outline-none hover:bg-gray-300 z-50"
+            >
+              <FaTimes className="text-gray-600 w-5 h-5" />
+            </button>
+            <BookingForm closeModal={closeModal} />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
