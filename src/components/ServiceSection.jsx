@@ -46,12 +46,12 @@ const ServiceSlider = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-800">
           What We Provide
         </h2>
-        <Slider {...settings}>
+        <Slider {...settings} className="overflow-hidden">
           {services.map((service, index) => (
             <div key={index} className="p-4">
               <div className="bg-white shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
@@ -87,7 +87,7 @@ const PrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-orange-500 p-2 rounded-full shadow-lg cursor-pointer hover:bg-orange-600"
+      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-orange-500 p-2 rounded-full shadow-lg cursor-pointer hover:bg-orange-600 z-40"
       onClick={onClick}
     >
       <span className="text-white">&larr;</span>

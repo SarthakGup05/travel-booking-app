@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Hero from "../components/Hero";
 import Navbar from "../components/Header";
 import AboutUsSection from "../components/AboutUs";
@@ -12,19 +15,43 @@ import ContactUs from "../components/ContactUsSection";
 import Footer from "../Layout/Footer";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Smooth easing for animations
+      once: false, // Trigger animations only once
+    });
+  }, []);
+
   return (
     <>
-    
-      <Hero />
-      <AboutUsSection/>
-      <ServiceSlider/>
-      <ExtraFeatures/>
-      <TopDestinations/>
-      <CallToAction/>
-      <CompanyImpression/>
-      <TourPlaces/>
-      <ContactUs/>
-      
+      <div data-aos="fade-up">
+        <Hero />
+      </div>
+      <div data-aos="fade-right">
+        <AboutUsSection />
+      </div>
+      <div data-aos="fade-out">
+        <ServiceSlider />
+      </div>
+      <div data-aos="zoom-in">
+        <ExtraFeatures />
+      </div>
+      <div data-aos="fade-up">
+        <TopDestinations />
+      </div>
+      <div data-aos="zoom-in-up">
+        <CallToAction />
+      </div>
+      <div data-aos="fade-right">
+        <CompanyImpression />
+      </div>
+      <div data-aos="fade-up" className="overflow-hidden">
+        <TourPlaces />
+      </div>
+      <div data-aos="fade-in">
+        <ContactUs />
+      </div>
     </>
   );
 };

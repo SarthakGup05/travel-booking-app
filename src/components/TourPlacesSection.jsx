@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const TourPlaces = () => {
   // Slick Slider settings
@@ -33,15 +34,15 @@ const TourPlaces = () => {
     ],
   };
 
-  // Example tour places data
-  const tourPlaces = [
+  
+  const destinations = [
     {
       id: 1,
       location: "Agra, Uttar Pradesh",
       price: "₹4,999.00",
       duration: "2 days",
       people: "4 Person",
-      image:  "/assets/images/Destinations/TAJ.jpg", // Image URL
+      image: "/assets/images/Destinations/TAJ.jpg", // Image URL
     },
     {
       id: 2,
@@ -49,7 +50,7 @@ const TourPlaces = () => {
       price: "₹6,999.00",
       duration: "3 days",
       people: "6 Person",
-      image: "/assets/images/Destinations/Varnasi.jpg",
+      image: "/assets/images/Destinations/ghat.jpg",
     },
     {
       id: 3,
@@ -60,17 +61,17 @@ const TourPlaces = () => {
       image: "/assets/images/Destinations/Lucknow.jpg",
     },
     {
-      id: 4,
-      location: "Kanpur, Uttar Pradesh",
+      id: 6,
+      location: "Prayagraj, Uttar Pradesh",
       price: "₹3,999.00",
-      duration: "1 day",
+      duration: "3 day",
       people: "3 Person",
-      image: "https://source.unsplash.com/400x300/?kanpur",
+      image: "/assets/images/Destinations/kumbh.jpg",
     },
   ];
 
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 bg-gray-100 overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-8">
@@ -95,43 +96,44 @@ const TourPlaces = () => {
 
         {/* Slider */}
         <Slider {...settings} className="mt-8 overflow-hidden">
-          {tourPlaces.map((place) => (
-            <motion.div
-              key={place.id}
-              whileHover={{ scale: 1.05 }}
-              className="p-4"
-            >
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                {/* Card Image */}
-                <img
-                  src={place.image}
-                  alt={place.location}
-                  className="h-48 w-full object-cover"
-                />
-                {/* Card Header */}
-                <div className="p-2 bg-black text-white text-sm font-semibold">
-                  Featured
-                </div>
-                {/* Card Body */}
-                <div className="p-4">
-                  <h4 className="text-lg font-bold text-gray-800">
-                    From {place.price}
-                  </h4>
-                  <p className="text-sm text-gray-600">{place.location}</p>
-                  <p className="text-sm text-gray-600">Days and nights From</p>
-                  <div className="flex items-center justify-between text-gray-600 mt-4">
-                    <div className="flex items-center gap-1">
-                      <i className="icon-clock"></i>
-                      <span>{place.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <i className="icon-person"></i>
-                      <span>{place.people}</span>
+          {destinations.map((place) => (
+            <Link to={`/listings/${place.id}`} key={place.id}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="p-4"
+              >
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  {/* Card Image */}
+                  <img
+                    src={place.image}
+                    alt={place.location}
+                    className="h-48 w-full object-cover"
+                  />
+                  {/* Card Header */}
+                  <div className="p-2 bg-black text-white text-sm font-semibold">
+                    Featured
+                  </div>
+                  {/* Card Body */}
+                  <div className="p-4">
+                    <h4 className="text-lg font-bold text-gray-800">
+                      From {place.price}
+                    </h4>
+                    <p className="text-sm text-gray-600">{place.location}</p>
+                    <p className="text-sm text-gray-600">Days and nights From</p>
+                    <div className="flex items-center justify-between text-gray-600 mt-4">
+                      <div className="flex items-center gap-1">
+                        <i className="icon-clock"></i>
+                        <span>{place.duration}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <i className="icon-person"></i>
+                        <span>{place.people}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
         </Slider>
       </div>

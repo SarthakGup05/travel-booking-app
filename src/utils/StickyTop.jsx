@@ -16,7 +16,7 @@ const StickyTop = () => {
           <i className="text-lg">
             <FaPhone />
           </i>
-          <span>684 555-0102 490</span>
+          <span>+91 9838587992</span>
         </div>
       </div>
 

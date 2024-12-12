@@ -1,24 +1,30 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import StickyTop from '../utils/StickyTop'
+import StickyTop from "../utils/StickyTop";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  const destinations = [
+    { name: "Varanasi", id: 2 },
+    { name: "Prayagraaj", id: 6 },
+    { name: "Mathura", id: 5 },
+    { name: "Ayodhya", id: 3 },
+    { name: "Agra", id: 1 },
+  ];
+
   const menuItems = [
     { title: "Home", link: "/" },
-    { title: "Tour", link: "/about" },
+    { title: "Taxis", link: "/" },
 
     {
       title: "Destinations",
-      subMenu: [
-        { title: "Varanasi", link: "/" },
-        { title: "Pryagraaj", link: "/" },
-        { title: "Mathura", link: "/" },
-        { title: "Ayodhya", link: "/" },
-      ],
+      subMenu: destinations.map((destination) => ({
+        title: destination.name,
+        link: `/listings/${destination.id}`,
+      })),
     },
 
     { title: "Contact Us", link: "/contactus" },
@@ -44,8 +50,7 @@ const Navbar = () => {
 
   return (
     <>
-    
-    <StickyTop/>
+      <StickyTop />
       <nav className="sticky top-0 bg-white shadow-md z-50">
         <div className="container mx-auto flex items-center justify-between px-4 py-2">
           <div className="text-2xl font-bold">
@@ -178,7 +183,7 @@ const Navbar = () => {
                 <Link
                   key={index}
                   to={item.link}
-                  className="underline-transition block px-4 py-2 font-semibold hover:bg-mango-yellow hover:text-white transition duration-300"
+                  className="underline-transition block px-4 py-2 font-semibold hover:bg-mango-yellow hover:text-orange-300 transition duration-300"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.title}
