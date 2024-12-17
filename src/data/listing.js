@@ -2,11 +2,12 @@ const listingsData = [
   {
     id: 1,
     name: "Agra",
-    description: "Experience the timeless beauty of the Taj Mahal, a UNESCO World Heritage site, and explore the opulent Agra Fort. Wander through the vibrant Kinari Bazaar for unique souvenirs, and indulge in the rich flavors of Mughlai cuisine. Agra offers a perfect blend of history, culture, and culinary delight, making it a must-visit destination in India. Don't miss the chance to witness the mesmerizing sunrise over the Taj Mahal, a sight that stays with you forever. Explore nearby attractions like Fatehpur Sikri and Mehtab Bagh for a complete experience of Mughal heritage.",
+    description:
+      "Experience the timeless beauty of the Taj Mahal and explore Agra Fort, steeped in Mughal history. Enjoy local Mughlai delicacies and shop for handicrafts at Kinari Bazaar.",
     images: [
-      "/assets/images/listings/agra1.jpg",
-      "/assets/images/listings/agra2.jpg",
-      "/assets/images/listings/agra3.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/e/eb/Taj_Mahal_in_March_2004.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/fb/Agra_Fort.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3f/Tomb_of_Itimad-ud-Daula_in_Agra.jpg",
     ],
     location: "Agra, Uttar Pradesh",
     pricePerNight: 3000,
@@ -15,21 +16,50 @@ const listingsData = [
       "Visit the Taj Mahal",
       "Explore Agra Fort",
       "Shopping at Kinari Bazaar",
-      "Taste Mughlai Cuisine"
+    ],
+    highlights: [
+      "Witness the sunrise at the Taj Mahal.",
+      "Explore the Mughal architecture of Agra Fort.",
+      "Shop for handicrafts in Kinari Bazaar.",
+      "Taste Mughlai delicacies in local eateries.",
     ],
     reviews: [
       { name: "John Doe", rating: 4.5, comment: "Loved the hospitality and the location!" },
-      { name: "Jane Smith", rating: 5, comment: "A perfect getaway with amazing amenities." }
-    ]
+      { name: "Jane Smith", rating: 5, comment: "A perfect getaway with amazing amenities." },
+    ],
+    thingsToDo: [
+      {
+        id: 1,
+        name: "Taj Mahal",
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Taj_Mahal_in_March_2004.jpg",
+        rating: 5000,
+        category: "Historical Landmark",
+      },
+      {
+        id: 2,
+        name: "Agra Fort",
+        image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Agra_Fort.jpg",
+        rating: 4000,
+        category: "Historical Landmark",
+      },
+      {
+        id: 3,
+        name: "Kinari Bazaar",
+        image: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Kinari_Bazaar_Agra.jpg",
+        rating: 2500,
+        category: "Shopping",
+      },
+    ],
   },
   {
     id: 2,
     name: "Varanasi",
-    description: "Discover the spiritual essence of India in Varanasi, one of the world's oldest cities. Experience the divine Ganga Aarti on the ghats, a spectacular ritual that draws devotees from around the globe. Explore the historical significance of Sarnath, where Lord Buddha gave his first sermon. Stroll along the ghats, each with its unique story, and immerse yourself in the vibrant street life. Taste the local delicacies, including the famous Kachori and Banarasi sweets. The city's aura of devotion and history offers a transformative journey for every visitor.",
+    description:
+      "Discover the spiritual essence of Varanasi, one of the oldest cities, where devotion meets the timeless flow of the sacred Ganges.",
     images: [
-      "/assets/images/listings/varanasi1.jpg",
-      "/assets/images/listings/varanasi2.jpg",
-      "/assets/images/listings/varanasi3.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/0/03/Varanasi_Ghats.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dashashwamedh_Ghat_Ganga_Aarti.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f6/Sarnath_Mulaganha.jpg",
     ],
     location: "Varanasi, Uttar Pradesh",
     pricePerNight: 2500,
@@ -38,105 +68,188 @@ const listingsData = [
       "Witness the Ganga Aarti",
       "Explore Sarnath",
       "Walk through Varanasi Ghats",
-      "Taste local street food"
+    ],
+    highlights: [
+      "Attend the mesmerizing Ganga Aarti at Dashashwamedh Ghat.",
+      "Explore the historical Sarnath site.",
+      "Stroll through the bustling markets of Varanasi.",
+      "Enjoy local delicacies like Kachori and sweets.",
     ],
     reviews: [
       { name: "Alice", rating: 4, comment: "Beautiful experience, the view was amazing." },
-      { name: "Bob", rating: 3.5, comment: "Good location but could improve the food quality." }
-    ]
+      { name: "Bob", rating: 3.5, comment: "Good location but could improve the food quality." },
+    ],
+    thingsToDo: [
+      {
+        id: 1,
+        name: "Ganga Aarti",
+        image: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dashashwamedh_Ghat_Ganga_Aarti.jpg",
+        rating: 5000,
+        category: "Spiritual Experience",
+      },
+      {
+        id: 2,
+        name: "Sarnath",
+        image: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Sarnath_Mulaganha.jpg",
+        rating: 3500,
+        category: "Historical Landmark",
+      },
+      {
+        id: 3,
+        name: "Varanasi Ghats",
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/03/Varanasi_Ghats.jpg",
+        rating: 4200,
+        category: "Cultural Experience",
+      },
+    ],
   },
   {
     id: 3,
     name: "Lucknow",
-    description: "Immerse yourself in the cultural richness of Lucknow, the City of Nawabs. Explore architectural wonders like Bara Imambara and Rumi Darwaza, symbols of the city's Mughal legacy. Indulge in the royal Awadhi cuisine, featuring dishes like kebabs, biryani, and kulfi. Stroll through Hazratganj Market, a shopper's paradise blending old-world charm with modern stores. Visit the British Residency to delve into colonial history. With its blend of history, culture, and gastronomy, Lucknow promises an unforgettable experience for every traveler.",
+    description:
+      "Experience the charm of the City of Nawabs, known for its rich cultural heritage, historic monuments, and delicious Awadhi cuisine.",
     images: [
-      "/assets/images/listings/lucknow1.jpg",
-      "/assets/images/listings/lucknow2.jpg",
-      "/assets/images/listings/lucknow3.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/3/3c/Bara_Imambara%2C_Lucknow.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/95/Rumi_Darwaza_Lucknow.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/67/Tunday_Kababi_Aminabad_Lucknow.jpg",
     ],
     location: "Lucknow, Uttar Pradesh",
     pricePerNight: 2800,
-    amenities: ["Free Parking", "Room Service", "City Tours", "WiFi Access"],
+    amenities: ["Free Parking", "Free WiFi", "Swimming Pool", "24x7 Support"],
     activities: [
       "Visit Bara Imambara",
-      "Explore Hazratganj Market",
-      "Taste Awadhi Biryani",
-      "Tour the British Residency"
+      "Explore the Rumi Darwaza",
+      "Taste Awadhi cuisine",
+    ],
+    highlights: [
+      "Marvel at the architectural beauty of Bara Imambara.",
+      "Walk through the historic Rumi Darwaza.",
+      "Relish kebabs and biryani at Tunday Kababi.",
+      "Explore Hazratganj for shopping and local culture.",
     ],
     reviews: [
-      { name: "Sophia", rating: 4.5, comment: "The food and heritage sites were exceptional." },
-      { name: "Raj", rating: 4, comment: "Great location, staff was very friendly." }
-    ]
+      { name: "Sophie", rating: 5, comment: "A cultural delight with great food and heritage sites." },
+      { name: "Rahul", rating: 4.5, comment: "Amazing food and comfortable stay." },
+    ],
+    thingsToDo: [
+      {
+        id: 1,
+        name: "Bara Imambara",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Bara_Imambara%2C_Lucknow.jpg",
+        rating: 4500,
+        category: "Historical Landmark",
+      },
+      {
+        id: 2,
+        name: "Rumi Darwaza",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/95/Rumi_Darwaza_Lucknow.jpg",
+        rating: 4000,
+        category: "Architectural Landmark",
+      },
+      {
+        id: 3,
+        name: "Tunday Kababi",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Tunday_Kababi_Aminabad_Lucknow.jpg",
+        rating: 4200,
+        category: "Food Experience",
+      },
+    ],
   },
   {
     id: 4,
     name: "Ayodhya",
-    description: "Ayodhya, the birthplace of Lord Rama, radiates spiritual significance and tranquility. Visit the sacred Ram Janmabhoomi and Hanuman Garhi Temple to feel the divine presence. Experience the evening aarti on the banks of the serene Saryu River, a spectacle of devotion and light. Wander through the city's bustling streets filled with devotional hymns and vibrant culture. The city's deep connection to Indian mythology and its spiritual aura make Ayodhya a unique and peaceful destination.",
+    description:
+      "Step into the divine world of Ayodhya, the birthplace of Lord Ram, and explore ancient temples, ghats, and sacred sites steeped in religious significance.",
     images: [
-      "/assets/images/listings/ayodhya1.jpg",
-      "/assets/images/listings/ayodhya2.jpg",
-      "/assets/images/listings/ayodhya3.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/6/64/Shri_Ram_Janmabhoomi_Temple.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/99/Ayodhya.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ea/Deepawali_celebrations_at_Ayodhya.jpg",
     ],
     location: "Ayodhya, Uttar Pradesh",
-    pricePerNight: 2200,
-    amenities: ["Temple View", "Breakfast", "Guided Tours", "24x7 Support"],
+    pricePerNight: 2000,
+    amenities: ["Free Parking", "24x7 Support"],
     activities: [
       "Visit Ram Janmabhoomi",
-      "Explore Hanuman Garhi Temple",
-      "Boat ride on Saryu River",
-      "Experience evening Aarti"
+      "Explore the ghats",
+      "Participate in Deepawali celebrations",
+    ],
+    highlights: [
+      "Visit the Ram Janmabhoomi Temple.",
+      "Explore the ghats along the Sarayu River.",
+      "Celebrate Deepawali on the banks of the river.",
     ],
     reviews: [
-      { name: "Anjali", rating: 4, comment: "A serene and spiritual experience!" },
-      { name: "Michael", rating: 3.5, comment: "Good stay but fewer food options nearby." }
-    ]
+      { name: "Mohan", rating: 4.5, comment: "A peaceful and spiritual place." },
+      { name: "Priya", rating: 4, comment: "A serene atmosphere, perfect for meditation." },
+    ],
+    thingsToDo: [
+      {
+        id: 1,
+        name: "Ram Janmabhoomi Temple",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/64/Shri_Ram_Janmabhoomi_Temple.jpg",
+        rating: 5000,
+        category: "Religious Site",
+      },
+      {
+        id: 2,
+        name: "Sarayu River Ghats",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Ayodhya.jpg",
+        rating: 3500,
+        category: "Cultural Experience",
+      },
+      {
+        id: 3,
+        name: "Deepawali at Ayodhya",
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/ea/Deepawali_celebrations_at_Ayodhya.jpg",
+        rating: 4000,
+        category: "Festivals",
+      },
+    ],
   },
   {
     id: 5,
     name: "Mathura",
-    description: "Mathura, the birthplace of Lord Krishna, is a haven for spiritual seekers and devotees. Visit the Krishna Janmabhoomi Temple and explore the intricately designed Dwarkadhish Temple. Enjoy a serene boat ride on the Yamuna River and experience the vibrant Holi celebrations, for which Mathura is world-famous. The city's timeless devotion and cultural vibrancy make it a must-visit destination in Uttar Pradesh. Immerse yourself in the local culture and connect with the divine spirit of Lord Krishna.",
+    description:
+      "Visit Mathura, the birthplace of Lord Krishna, and explore its many temples, ghats, and sacred sites. A city rich in cultural and spiritual significance.",
     images: [
-      "/assets/images/listings/mathura1.jpg",
-      "/assets/images/listings/mathura2.jpg",
-      "/assets/images/listings/mathura3.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/f/f9/Krishna_Birthplace_Mathura.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9f/Krishna_Birthplace_Mathura.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/43/Banke_Bihari_Temple_Mathura.jpg",
     ],
     location: "Mathura, Uttar Pradesh",
-    pricePerNight: 2400,
-    amenities: ["Proximity to Temples", "Breakfast", "24x7 Support"],
+    pricePerNight: 2200,
+    amenities: ["Free WiFi", "Rooftop View", "24x7 Support"],
     activities: [
-      "Visit Krishna Janmabhoomi Temple",
-      "Explore Dwarkadhish Temple",
-      "Boat ride on Yamuna River",
-      "Experience Holi celebrations"
+      "Visit Krishna Janmabhoomi",
+      "Explore Banke Bihari Temple",
+      "Experience the Holi Festival",
+    ],
+    highlights: [
+      "Witness the sacred Krishna Janmabhoomi temple.",
+      "Attend the Holi celebrations.",
+      "Shop for handmade Krishna idols and paintings.",
     ],
     reviews: [
-      { name: "Meera", rating: 4.5, comment: "Perfect place for spiritual seekers." },
-      { name: "Tom", rating: 4, comment: "Peaceful environment and great service." }
-    ]
+      { name: "Amit", rating: 5, comment: "A divine and enriching experience." },
+      { name: "Ravi", rating: 4.5, comment: "A place full of devotion and serenity." },
+    ],
+    thingsToDo: [
+      {
+        id: 1,
+        name: "Krishna Janmabhoomi",
+        image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Krishna_Birthplace_Mathura.jpg",
+        rating: 5000,
+        category: "Religious Site",
+      },
+      {
+        id: 2,
+        name: "Banke Bihari Temple",
+        image: "https://upload.wikimedia.org/wikipedia/commons/4/43/Banke_Bihari_Temple_Mathura.jpg",
+        rating: 4200,
+        category: "Cultural Experience",
+      },
+    ],
   },
-  {
-    id: 6,
-    name: "Prayagraj",
-    description: "Prayagraj, renowned for its Triveni Sangam, where the Ganga, Yamuna, and Saraswati rivers converge, is a hub of spirituality and culture. Experience the grandeur of **Kumbh Mela 2025**, the largest gathering of humanity celebrating faith and devotion. Explore the historic Allahabad Fort and Anand Bhavan, and take a boat ride at sunrise to witness the Sangam's serene beauty. Prayagraj offers a unique blend of spirituality, history, and vibrant festivals, making it a must-visit destination.",
-    images: [
-      "/assets/images/listings/prayagraj1.jpg",
-      "/assets/images/listings/prayagraj2.jpg",
-      "/assets/images/listings/prayagraj3.jpg"
-    ],
-    location: "Prayagraj, Uttar Pradesh",
-    pricePerNight: 2600,
-    amenities: ["Sangam View", "Breakfast", "Guided Tours", "24x7 Support"],
-    activities: [
-      "Attend Kumbh Mela 2025",
-      "Visit Allahabad Fort",
-      "Explore Anand Bhavan",
-      "Boat ride at Triveni Sangam"
-    ],
-    reviews: [
-      { name: "Ravi", rating: 5, comment: "An unforgettable experience during Kumbh!" },
-      { name: "Priya", rating: 4.5, comment: "Peaceful and spiritually enriching." }
-    ]
-  }
 ];
 
 export default listingsData;
