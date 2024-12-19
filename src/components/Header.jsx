@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const menuItems = [
     { title: "Home", link: "/" },
-    { title: "Taxis", link: "/" },
+    { title: "Taxis", link: "/taxi" },
 
     {
       title: "Destinations",

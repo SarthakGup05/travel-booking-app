@@ -8,6 +8,7 @@ import ContactUs from "./pages/ContactUs";
 import Layout from "./Layout/Layout";
 import AboutUs from "./pages/AboutUs";
 import ListingDetail from "./pages/DestinationDetailPage";
+import Taxi from "./pages/Taxi";
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,8 @@ function App() {
           <Route path="contactus" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/listings/:id" element={<ListingDetail />} />
+          <Route path="/taxi" element={<Taxi />} />
+          
         </Route>
       </Routes>
     </>
