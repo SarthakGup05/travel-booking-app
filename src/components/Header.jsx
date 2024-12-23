@@ -52,7 +52,7 @@ const Navbar = () => {
     <>
       <StickyTop />
       <nav className="sticky top-0 bg-white shadow-md z-50">
-        <div className="container mx-auto flex items-center justify-between px-4 py-2">
+        <div className="container mx-auto flex items-center justify-between px-2 py-1 mt-3">
           <div className="text-2xl font-bold">
             <Link to="/">
               <img
@@ -60,6 +60,7 @@ const Navbar = () => {
                 className="h-20 w-30"
                 alt="Brand Logo"
               />
+              <p className="text-sm text-gray-600 text-center flex justify-center">MSJF Travels</p>
             </Link>
           </div>
           <div className="lg:hidden">

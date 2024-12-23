@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaMapMarkedAlt, FaUserAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AboutUsSection = () => {
   return (
@@ -118,12 +119,12 @@ const ButtonWithProfile = () => (
     animate={{ opacity: 1 }}
     transition={{ duration: 0.8, delay: 0.6 }}
   >
-    <a
-      href="#"
+    <Link
+      to={"/about"}
       className="bg-gray-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-700 transition"
     >
       More about us
-    </a>
+    </Link>
     <div className="flex items-center space-x-3">
       <img
         src="https://source.unsplash.com/random/50x50?person"

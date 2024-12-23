@@ -7,9 +7,9 @@ const Hero = () => {
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/taj.mp4" // Replace with your video URL
-        autoPlay
-        loop
+        src="/taj.webm" // Replace with your video URL
+        autoPlay = {true} // Autoplay the video
+        loop = {true} // Loop the video
         muted
       ></video>
       

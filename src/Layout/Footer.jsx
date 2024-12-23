@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-black">
       {/* Top Section */}
-      <div className="container mx-auto px-4 py-10">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {/* Company Info */}
           <div className="flex flex-col items-start space-y-2">
@@ -15,10 +15,7 @@ const Footer = () => {
               alt="Company Logo" 
               className="w-20" 
             />
-            {/* <p className="text-sm">
-              MSJF Travels is dedicated to providing unparalleled travel experiences and the finest farm products. 
-              Let us bring joy to your life!
-            </p> */}
+            <p className="text-sm text-gray-600 text-center font-semibold mb-2">MSJF Travels</p>
             <div className="flex items-center space-x-2">
               <FaEnvelope />
               <span>abc@gmail.com</span>
@@ -45,14 +42,19 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link className="hover:underline" to="/tour-packages">
+              {/* <li>
+              <a className="hover:underline" href="#tour-packages">
                   Tour Packages
-                </Link>
-              </li>
-              <li>
-                <Link className="hover:underline" to="/destinations">
+                </a>
+              </li> */}
+              {/* <li>
+              <a className="hover:underline" href="#destinations">
                   Destinations
+                </a>
+              </li> */}
+              <li>
+              <Link className="hover:underline" to="/taxi">
+                  Taxis
                 </Link>
               </li>
               <li>

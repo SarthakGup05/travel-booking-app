@@ -1,48 +1,58 @@
-import React from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaPhone,
-  FaEnvelope,
-} from "react-icons/fa";
+import React from 'react';
+import { FaInstagram, FaFacebook, FaTwitter, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const StickyTop = () => {
   return (
-    <div className="header-top-wrap grid grid-cols-1 md:grid-cols-2 gap-y-3 md:gap-y-0 px-4 md:px-6 py-2 bg-gray-800 text-white">
-      {/* Right Section */}
-      <div className="header-top-right flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 text-center md:text-left">
-        <div className="flex items-center space-x-2 text-sm md:text-base">
-          <FaEnvelope className="text-lg" />
+    <div className="header-top-wrap flex flex-wrap justify-between items-center gap-y-2 px-3 py-1 bg-gray-800 text-white text-sm">
+      {/* Contact Section */}
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <div className="flex items-center space-x-1">
+          <FaEnvelope className="text-base" />
           <span>Info@Webmail.Com</span>
         </div>
-        <div className="flex items-center space-x-2 text-sm md:text-base">
-          <FaPhone className="text-lg" />
+        <div className="flex items-center space-x-1">
+          <FaPhone className="text-base" />
           <span>+91 9838587992</span>
         </div>
       </div>
 
-      {/* Left Section */}
-      <div className="header-top-left flex flex-col md:flex-row items-center justify-center md:justify-end space-y-3 md:space-y-0 md:space-x-4">
-        <span className="font-medium text-sm md:text-base">Follow Us:</span>
-        <ul className="flex space-x-4">
+      {/* Social Media Section */}
+      <div className="flex items-center gap-x-2">
+        <span className="hidden md:inline font-medium">Follow Us:</span>
+        <ul className="flex space-x-3">
           <li>
             <a
-              href="#"
-              className="text-white hover:text-blue-500 transition-all duration-300 text-lg"
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-500 transition-all duration-300 text-base"
               aria-label="Facebook"
             >
-              <FaFacebookF />
+              <FaFacebook />
             </a>
           </li>
           <li>
             <a
-              href="#"
-              className="text-white hover:text-pink-500 transition-all duration-300 text-lg"
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-pink-500 transition-all duration-300 text-base"
               aria-label="Instagram"
             >
               <FaInstagram />
             </a>
           </li>
+          {/* <li>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-500 transition-all duration-300 text-base"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </a>
+          </li> */}
         </ul>
       </div>
     </div>

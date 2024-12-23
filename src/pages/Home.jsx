@@ -37,7 +37,7 @@ const Home = () => {
       <div data-aos="zoom-in">
         <ExtraFeatures />
       </div>
-      <div data-aos="fade-up">
+      <div data-aos="fade-up" id="destinations">
         <TopDestinations />
       </div>
       <div data-aos="zoom-in-up">
@@ -46,7 +46,7 @@ const Home = () => {
       <div data-aos="fade-right">
         <CompanyImpression />
       </div>
-      <div data-aos="fade-up" className="overflow-hidden">
+      <div data-aos="fade-up" className="overflow-hidden" id="tour-packages">
         <TourPlaces />
       </div>
       <div data-aos="fade-in">
