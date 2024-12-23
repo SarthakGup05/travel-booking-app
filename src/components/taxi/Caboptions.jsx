@@ -9,14 +9,14 @@ const CabOptions = () => {
       ideal: "Comfortable trips with small families",
     },
     {
-      type: "Hatchback",
-      models: "Nexon",
-      passengers: "4 Pax",
-      ideal: "Budget trips over short distances",
+      type: "MUVs",
+      models: "ERTIGA,  Rumion  etc.",
+      passengers: "7 Pax",
+      ideal: "Premium trips with big families",
     },
     {
-      type: "SUVs and MUVs",
-      models: "Innova, Crysta and Ertiga",
+      type: "SUVs",
+      models: "Kia Carens and Innova",
       passengers: "6-7 Pax",
       ideal: "Premium trips with large families",
     },
@@ -46,9 +46,7 @@ const CabOptions = () => {
             {cabData.map((cab, index) => (
               <tr
                 key={index}
-                className={`${
-                  index % 2 === 0 ? "bg-gray-100" : "bg-white"
-                }`}
+                className={`${index % 2 === 0 ? "bg-gray-100" : "bg-white"}`}
               >
                 <td className="p-4 border border-gray-300">{cab.type}</td>
                 <td className="p-4 border border-gray-300">{cab.models}</td>

@@ -7,9 +7,10 @@ const TermsAndConditions = () => {
       description: "Calculated from Garage to Garage.",
     },
     {
-      title: "Night Charges",
-      description: "Applicable between 10 PM and 6 AM.",
+      "title": "Night Charges",
+      "description": "Applicable between 10 PM and 6 AM  ₹300."
     },
+    
     {
       title: "Additional Costs",
       description: "Parking, toll, and taxes are extra and added to the bill.",

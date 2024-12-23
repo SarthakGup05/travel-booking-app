@@ -143,7 +143,7 @@ const Navbar = () => {
                 <div key={index} className="relative" ref={dropdownRef}>
                   <button
                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className="underline-transition block w-full text-left px-4 py-2 font-semibold hover:bg-mango-yellow hover:text-white transition duration-300"
+                    className="underline-transition block w-full text-left px-4 py-2 font-semibold hover:bg-mango-yellow hover:text-yellow-500 transition duration-300"
                   >
                     {item.title}
                     <svg
@@ -167,7 +167,7 @@ const Navbar = () => {
                         <Link
                           key={subIndex}
                           to={subItem.link}
-                          className="hover:bg-mango-yellow hover:text-white underline-transition block px-4 py-2 transition duration-300"
+                          className="hover:bg-mango-yellow hover:text-yellow-500 underline-transition block px-4 py-2 transition duration-300"
                           onClick={() => {
                             setDropdownOpen(false);
                             setMenuOpen(false);

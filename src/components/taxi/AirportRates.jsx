@@ -3,9 +3,9 @@ import React from "react";
 const AirportRatesTable = () => {
   const cabRates = [
     { type: "Sedan", dropRate: "₹1000", receiveRate: "₹1200" },
-    { type: "Hatchback", dropRate: "₹1000", receiveRate: "₹1200" },
-    { type: "SUVs", dropRate: "₹1300", receiveRate: "₹1500" },
-    { type: "MUVs", dropRate: "₹1600", receiveRate: "₹1800" },
+    // { type: "Hatchback", dropRate: "₹1000", receiveRate: "₹1200" },
+    { type: "SUVs", dropRate: "₹1400", receiveRate: "₹1500" },
+    { type: "MUVs", dropRate: "₹1300", receiveRate: "₹1500" },
   ];
 
   return (

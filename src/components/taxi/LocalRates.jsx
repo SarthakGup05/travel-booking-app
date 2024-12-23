@@ -3,7 +3,7 @@ import React from "react";
 const LocalTravelRatesTable = () => {
   const travelRates = [
     { type: "Sedan", fixed: "8 Hrs / 80 KM", rate: "₹1600", extraKm: "₹12", extraHour: "₹120" },
-    { type: "Hatchback", fixed: "8 Hrs / 80 KM", rate: "₹1600", extraKm: "₹12", extraHour: "₹120" },
+    // { type: "Hatchback", fixed: "8 Hrs / 80 KM", rate: "₹1600", extraKm: "₹12", extraHour: "₹120" },
     { type: "SUVs", fixed: "8 Hrs / 80 KM", rate: "₹2000", extraKm: "₹17", extraHour: "₹300" },
     { type: "MUVs", fixed: "8 Hrs / 80 KM", rate: "₹1800", extraKm: "₹13", extraHour: "₹100" },
   ];

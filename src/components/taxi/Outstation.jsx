@@ -3,7 +3,7 @@ import React from "react";
 const OutstationJourneyRatesTable = () => {
   const outstationRates = [
     { type: "Sedan", minJourney: "250 KM", ratePerKm: "₹10.5" },
-    { type: "Hatchback", minJourney: "250 KM", ratePerKm: "₹10.5" },
+    // { type: "Hatchback", minJourney: "250 KM", ratePerKm: "₹10.5" },
     { type: "SUVs", minJourney: "250 KM", ratePerKm: "₹17" },
     { type: "MUVs", minJourney: "250 KM", ratePerKm: "₹14" },
   ];

@@ -52,10 +52,10 @@ const CabBookingForm = () => {
               <input type="radio" name="trip" id="round" className="w-4 h-4" />
               <label htmlFor="round" className="text-sm">Round Trip</label>
             </div>
-            <div className="flex items-center space-x-2">
+            {/* <div className="flex items-center space-x-2">
               <input type="radio" name="trip" id="oneway" className="w-4 h-4" />
               <label htmlFor="oneway" className="text-sm">One Way Trip</label>
-            </div>
+            </div> */}
           </div>
           <form className="space-y-4">
             <input
