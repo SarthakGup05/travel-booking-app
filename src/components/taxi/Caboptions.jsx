@@ -10,13 +10,13 @@ const CabOptions = () => {
     },
     {
       type: "MUVs",
-      models: "ERTIGA,  Rumion  etc.",
+      models: "ERTIGA,  Rumion, Kia Carens, Innova  etc.",
       passengers: "7 Pax",
       ideal: "Premium trips with big families",
     },
     {
       type: "SUVs",
-      models: "Kia Carens and Innova",
+      models: " Crysta and Innova",
       passengers: "6-7 Pax",
       ideal: "Premium trips with large families",
     },

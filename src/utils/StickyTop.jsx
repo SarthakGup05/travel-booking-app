@@ -1,31 +1,38 @@
 import React from 'react';
-import { FaInstagram, FaFacebook, FaTwitter, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const StickyTop = () => {
   return (
-    <div className="header-top-wrap flex flex-wrap justify-between items-center gap-y-2 px-3 py-1 bg-gray-800 text-white text-sm">
+    <div className="header-top-wrap flex flex-wrap justify-between items-center gap-y-1 px-2 py-1 bg-gray-800 text-white text-xs sm:text-sm">
       {/* Contact Section */}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <div className="flex items-center space-x-1">
-          <FaEnvelope className="text-base" />
+      <div className="flex flex-col sm:flex-row sm:items-center gap-y-1 sm:gap-x-3">
+        {/* Email - Hidden on Mobile */}
+        <div className="hidden sm:flex items-center space-x-1">
+          <FaEnvelope className="text-sm" />
           <span>Info@Webmail.Com</span>
         </div>
+        {/* Travel Booking */}
         <div className="flex items-center space-x-1">
-          <FaPhone className="text-base" />
+          <p className="font-mono">Travel Booking:</p>
           <span>+91 9838587992</span>
+        </div>
+        {/* Taxi Booking */}
+        <div className="flex items-center space-x-1">
+          <p className="font-mono">Taxi Booking:</p>
+          <span>+91 7505918386</span>
         </div>
       </div>
 
       {/* Social Media Section */}
       <div className="flex items-center gap-x-2">
         <span className="hidden md:inline font-medium">Follow Us:</span>
-        <ul className="flex space-x-3">
+        <ul className="flex space-x-2">
           <li>
             <a
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-blue-500 transition-all duration-300 text-base"
+              className="text-white hover:text-blue-500 transition-all duration-300 text-sm"
               aria-label="Facebook"
             >
               <FaFacebook />
@@ -36,23 +43,12 @@ const StickyTop = () => {
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-pink-500 transition-all duration-300 text-base"
+              className="text-white hover:text-pink-500 transition-all duration-300 text-sm"
               aria-label="Instagram"
             >
               <FaInstagram />
             </a>
           </li>
-          {/* <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-blue-500 transition-all duration-300 text-base"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
-            </a>
-          </li> */}
         </ul>
       </div>
     </div>

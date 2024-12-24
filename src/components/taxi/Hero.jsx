@@ -1,5 +1,4 @@
 import React from "react";
-
 import CabBookingForm from "./CabBookingForm";
 
 const Header = () => {
@@ -14,7 +13,7 @@ const Header = () => {
           <img
             src="\assets\images\graphics\cab cover.jpg" // Replace with your image URL
             alt="Taxi ride"
-            className="w-[900px] h-[520px] object-cover rounded-lg"
+            className="w-full h-[300px] sm:h-[400px] md:h-[520px] sm:w-[600px] md:w-[900px] object-cover rounded-lg"
           />
           <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"></div>
         </div>
