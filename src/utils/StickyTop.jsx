@@ -9,17 +9,17 @@ const StickyTop = () => {
         {/* Email - Hidden on Mobile */}
         <div className="hidden sm:flex items-center space-x-1">
           <FaEnvelope className="text-sm" />
-          <span>Info@Webmail.Com</span>
+          <span>msjftour@gmail.com</span>
         </div>
         {/* Travel Booking */}
         <div className="flex items-center space-x-1">
-          <p className="font-mono">Travel Booking:</p>
-          <span>+91 9838587992</span>
+          <p className="font-mono">Tour Booking:</p>
+          <span>+91 9198887992</span>
         </div>
         {/* Taxi Booking */}
         <div className="flex items-center space-x-1">
           <p className="font-mono">Taxi Booking:</p>
-          <span>+91 7505918386</span>
+          <span>+91  9838587992</span>
         </div>
       </div>
 
@@ -29,7 +29,7 @@ const StickyTop = () => {
         <ul className="flex space-x-2">
           <li>
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/share/L5zCqZy2qdDBCcvu/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-500 transition-all duration-300 text-sm"
@@ -40,7 +40,7 @@ const StickyTop = () => {
           </li>
           <li>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/msjftravels/profilecard/?igsh=MWw5ZHJscmxldGVkcA=="
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-pink-500 transition-all duration-300 text-sm"

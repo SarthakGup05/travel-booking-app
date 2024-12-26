@@ -18,11 +18,11 @@ const Footer = () => {
             <p className="text-sm text-gray-600 text-center font-semibold mb-2">MSJF Travels</p>
             <div className="flex items-center space-x-2">
               <FaEnvelope />
-              <span>abc@gmail.com</span>
+              <span>msjftour@gmail.com</span>
             </div>
             <div className="flex items-center space-x-2">
               <FaPhoneAlt />
-              <span>+91 9198887992, 9838587992</span>
+              <span>+91 +91 9198887992, +91  9838587992</span>
             </div>
             <div className="flex items-center space-x-2">
               <FaMapMarkerAlt />
@@ -70,7 +70,7 @@ const Footer = () => {
             <h5 className="text-xl font-bold mb-4">Follow Us</h5>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/msjftravels/profilecard/?igsh=MWw5ZHJscmxldGVkcA==" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-black hover:text-gray-700"
@@ -78,7 +78,7 @@ const Footer = () => {
                 <FaInstagram size={24} />
               </a>
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/share/L5zCqZy2qdDBCcvu/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-black hover:text-gray-700"
@@ -86,7 +86,7 @@ const Footer = () => {
                 <FaFacebook size={24} />
               </a>
               <a 
-                href="" 
+                href="https://wa.me/9198887992" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-black hover:text-gray-700"

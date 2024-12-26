@@ -16,7 +16,7 @@ const CabOptions = () => {
     },
     {
       type: "SUVs",
-      models: " Crysta and Innova",
+      models: "Innova Crysta",
       passengers: "6-7 Pax",
       ideal: "Premium trips with large families",
     },
