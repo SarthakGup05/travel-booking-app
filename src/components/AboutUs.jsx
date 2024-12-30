@@ -127,12 +127,12 @@ const ButtonWithProfile = () => (
     </Link>
     <div className="flex items-center space-x-3">
       <img
-        src="https://source.unsplash.com/random/50x50?person"
+        src="\assets\images\logo\file.png"
         alt="Travel Expert"
-        className="w-12 h-12 rounded-full shadow"
+        className="w-14 h-14 rounded-full shadow"
       />
       <div>
-        <p className="text-sm font-bold">Amit Kumar</p>
+        <p className="text-sm font-bold">Fahad Ali</p>
         <span className="block text-gray-500 text-sm">Founder & Ceo</span>
       </div>
     </div>
