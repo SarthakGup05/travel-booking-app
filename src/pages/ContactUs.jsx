@@ -54,7 +54,7 @@ const ContactUs = () => {
                   href="mailto:abc@gmail.com"
                   className="text-gray-700 hover:underline"
                 >
-                  abc@gmail.com
+                  msjftour@gmail.com
                 </a>
               </div>
 
@@ -64,7 +64,7 @@ const ContactUs = () => {
                   href="tel:+917817821976"
                   className="text-gray-700 hover:underline"
                 >
-                  +91 9838587992
+                   +91 9198887992, +91  9838587992
                 </a>
               </div>
             </div>
