@@ -28,10 +28,10 @@ const Hero = ({ backgroundType, backgroundSrc }) => {
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="text-center max-w-4xl px-6 md:px-0">
           <h2 className="text-lg md:text-2xl text-yellow-400 font-semibold mb-4">
-            Discover the Heart of India
+          Experience the Spirit of India at Mahakumbh 2025
           </h2>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Experience Uttar Pradesh<br />
+          Discover the Soul of Uttar Pradesh at Mahakumbh 2025<br />
             <span className="text-yellow-400">
               <Typewriter
                 options={{

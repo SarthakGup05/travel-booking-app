@@ -2,7 +2,8 @@ import React from "react";
 import Hero from "../utils/HeroComponent";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { FiUser, FiMail, FiPhone, FiMessageSquare } from "react-icons/fi"; // Add icons
+import { FiUser, FiMail, FiPhone, FiMessageSquare } from "react-icons/fi";
+import KumbhImg from "/kumbh.webp"; // Correct the import name and path
 
 const Kumbh = () => {
   const formik = useFormik({
@@ -30,13 +31,15 @@ const Kumbh = () => {
 
   return (
     <>
-      <Hero />
+      <Hero backgroundSrc={KumbhImg} />
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-          <p className="text-gray-600">We'd love to hear from you. Please fill out the form below.</p>
+          <p className="text-gray-600">
+            We'd love to hear from you. Please fill out the form below.
+          </p>
         </div>
-        
+
         <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
           <form onSubmit={formik.handleSubmit} className="grid md:grid-cols-2 gap-6">
             {/* Name */}
