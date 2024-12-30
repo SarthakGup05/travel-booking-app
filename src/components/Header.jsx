@@ -18,7 +18,11 @@ const Navbar = () => {
   const menuItems = [
     { title: "Home", link: "/" },
     { title: "Taxis", link: "/taxi" },
-
+    {
+      title: "Mahakumbh 2025",
+      link: "/mahakumbh",
+      badge: "Upcoming", // Add badge property
+    },
     {
       title: "Destinations",
       subMenu: destinations.map((destination) => ({
@@ -26,7 +30,6 @@ const Navbar = () => {
         link: `/listings/${destination.id}`,
       })),
     },
-
     { title: "Contact Us", link: "/contactus" },
   ];
 
@@ -60,7 +63,9 @@ const Navbar = () => {
                 className="h-20 w-30"
                 alt="Brand Logo"
               />
-              <p className="text-sm text-gray-600 text-center flex justify-center">MSJF Travels</p>
+              <p className="text-sm text-gray-600 text-center flex justify-center">
+                MSJF Travels
+              </p>
             </Link>
           </div>
           <div className="lg:hidden">
@@ -129,9 +134,14 @@ const Navbar = () => {
                 <Link
                   key={index}
                   to={item.link}
-                  className="underline-transition font-semibold hover:text-mango-yellow transition duration-300"
+                  className="underline-transition font-semibold hover:text-mango-yellow transition duration-300 flex items-center"
                 >
                   {item.title}
+                  {item.badge && item.title === "Mahakumbh 2025" && (
+                    <span className="ml-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                      {item.badge}
+                    </span>
+                  )}
                 </Link>
               )
             )}
@@ -188,6 +198,11 @@ const Navbar = () => {
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.title}
+                  {item.badge && item.title === "Mahakumbh 2025" && (
+                    <span className="ml-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                      {item.badge}
+                    </span>
+                  )}
                 </Link>
               )
             )}

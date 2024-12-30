@@ -9,6 +9,7 @@ import Layout from "./Layout/Layout";
 import AboutUs from "./pages/AboutUs";
 import ListingDetail from "./pages/DestinationDetailPage";
 import Taxi from "./pages/Taxi";
+import Kumbh from "./pages/Kumbh";
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="contactus" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/mahakumbh" element={<Kumbh />} />
+
           <Route path="/listings/:id" element={<ListingDetail />} />
           <Route path="/taxi" element={<Taxi />} />
           
